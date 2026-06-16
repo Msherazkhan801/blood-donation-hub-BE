@@ -9,7 +9,9 @@ const donorSchema = new mongoose.Schema({
   bloodType: { type: String, required: true },
   lastDonationDate: { type: String },
   streetAddress: { type: String, required: true },
-  city: { type: String, required: true }
+  city: { type: String, required: true },
+  latitude: { type: Number, default: null },
+  longitude: { type: Number, default: null }
 });
 
 module.exports = mongoose.model('Donor', donorSchema);
